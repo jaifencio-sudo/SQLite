@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2E1C15"
+    android:orientation="vertical"
+    android:paddingStart="24dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="8dp">
+
+    <!-- Username -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilUsername"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="Username (único)"
+        app:boxStrokeColor="#D4B28C"
+        app:boxStrokeWidth="1.5dp"
+        app:hintTextColor="#D4B28C"
+        app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+        app:startIconTint="#D4B28C">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dlgUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"
+            android:maxLines="1"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#A1887F" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Nombre Completo -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="Nombre completo"
+        app:boxStrokeColor="#D4B28C"
+        app:boxStrokeWidth="1.5dp"
+        app:hintTextColor="#D4B28C">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dlgNombreCompleto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName|textCapWords"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#A1887F" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="Contraseña (mín. 6 caracteres)"
+        app:boxStrokeColor="#D4B28C"
+        app:boxStrokeWidth="1.5dp"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#D4B28C"
+        app:hintTextColor="#D4B28C">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dlgPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#A1887F" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Etiqueta Rol -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Rol"
+        android:textColor="#D4B28C"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <!-- Spinner de Rol con Fondo Cálido -->
+    <Spinner
+        android:id="@+id/dlgRol"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="12dp"
+        android:background="#4A3326"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp" />
+
+    <!-- Switch de Usuario Activo -->
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/dlgActivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:checked="true"
+        android:text="Usuario activo"
+        android:textColor="#D7CCC8"
+        app:thumbTint="#D4B28C"
+        app:trackTint="#4A3326" />
+</LinearLayout>

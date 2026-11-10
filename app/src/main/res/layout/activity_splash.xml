@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:cardBackgroundColor="#CC2E1C15"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="6dp"
+        app:strokeColor="#D4B28C"
+        app:strokeWidth="1.5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:letterSpacing="0.04"
+                android:text="Comercializadora Angel"
+                android:textColor="#D4B28C"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Cargando sistema..."
+                android:textColor="#D7CCC8"
+                android:textSize="14sp" />
+
+
+            <ProgressBar
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="20dp"
+                android:indeterminateTint="#D4B28C" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:paddingTop="140dp">
+
+    <!-- Tarjeta con Encabezado y Descripción -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:cardBackgroundColor="#D92E1C15"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:strokeColor="#D4B28C"
+        app:strokeWidth="1.5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.04"
+                android:text="Usuarios y roles"
+                android:textColor="#D4B28C"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Toque un elemento para editarlo"
+                android:textColor="#D7CCC8"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Pestañas (Toggle Group) -->
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:selectionRequired="true"
+        app:singleSelection="true"
+        app:strokeColor="#D4B28C"
+        app:strokeWidth="1.5dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tabUsuarios"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Usuarios"
+            android:textColor="#D4B28C"
+            app:strokeColor="#D4B28C" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tabRoles"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Roles"
+            android:textColor="#D4B28C"
+            app:strokeColor="#D4B28C" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <!-- Botón Agregar -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAgregar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="12dp"
+        android:text="+ Nuevo usuario"
+        android:textColor="#2E1C15"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="#D4B28C"
+        app:cornerRadius="12dp"
+        app:elevation="4dp" />
+
+    <!-- Tarjeta de Contenedor Translúcido Café Claro para el ListView -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardBackgroundColor="#D9D4B28C"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:strokeColor="#5D4037"
+        app:strokeWidth="1.5dp">
+
+        <ListView
+            android:id="@+id/lstUsuarios"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#5D4037"
+            android:dividerHeight="1dp"
+            android:padding="8dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Botón Volver -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnVolver"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:text="Volver"
+        android:textColor="#D4B28C"
+        app:backgroundTint="#D92E1C15"
+        app:cornerRadius="12dp"
+        app:strokeColor="#D4B28C"
+        app:strokeWidth="1.5dp" />
+</LinearLayout>

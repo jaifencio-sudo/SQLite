@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- RF-25 / RF-26: ubicación del dispositivo (se pide en tiempo de ejecución, solo al usarla) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- El Code Scanner de Google usa su propia pantalla de cámara: no hace falta el permiso CAMERA -->
+
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SQLite">
+
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- RF-20: búsqueda por código de barras / RF-24, 25, 26: ubicación y ruta -->
+        <activity android:name=".EscanerActivity" android:exported="false" />
+        <activity android:name=".UbicacionActivity" android:exported="false" />
+        <!-- CRUD de códigos de barras y de sucursales (mapa) -->
+        <activity
+            android:name=".CodigosBarrasActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SucursalesActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Descarga el módulo del escáner al instalar la app (evita esperar en el primer escaneo) -->
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="barcode_ui" />
+
+        <activity android:name=".MovimientosActivity" android:exported="false" />
+        <activity android:name=".HistorialMovimientosActivity" android:exported="false" />
+        <activity android:name=".MenuActivity" android:exported="false" />
+        <activity
+            android:name=".InventarioActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ProductoActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".CategoriasActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ProveedoresActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".UsuariosActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
+
+</manifest>

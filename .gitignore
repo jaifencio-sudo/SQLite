@@ -1,0 +1,27 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Configuración local y archivos de ejecución
+*.log
+*.jks
+*.keystore
+
+# Estado personal del editor y dispositivos locales
+/.idea/shelf/
+/.idea/deviceManager.xml
+/.idea/deploymentTargetSelector.xml
+/.idea/deploymentTargetDropDown.xml
+/.idea/gradleLocalSettings.xml

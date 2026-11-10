@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:paddingTop="140dp">
+
+    <!-- Tarjeta con Encabezado y Filtro de Búsqueda -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:cardBackgroundColor="#D92E1C15"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:strokeColor="#D4B28C"
+        app:strokeWidth="1.5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblTituloInv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.04"
+                android:text="Inventario"
+                android:textColor="#D4B28C"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:text="Toque un producto para editarlo"
+                android:textColor="#D7CCC8"
+                android:textSize="13sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Buscar por nombre o SKU"
+                app:boxStrokeColor="#D4B28C"
+                app:boxStrokeWidth="1.5dp"
+                app:hintTextColor="#D4B28C"
+                app:startIconDrawable="@android:drawable/ic_menu_search"
+                app:startIconTint="#D4B28C">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtBuscar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#A1887F" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Botón Agregar Producto -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNuevo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="12dp"
+        android:text="+ Agregar producto"
+        android:textColor="#2E1C15"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="#D4B28C"
+        app:cornerRadius="12dp"
+        app:elevation="4dp" />
+
+    <!-- Botón Descargar Informe PDF -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPdfInventario"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="12dp"
+        android:text="Descargar informe PDF"
+        android:textColor="#2E1C15"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="#D4B28C"
+        app:cornerRadius="12dp"
+        app:elevation="4dp" />
+
+    <!-- Tarjeta de Contenedor Medio Translúcida para el ListView -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardBackgroundColor="#D9D4B28C"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:strokeColor="#5D4037"
+        app:strokeWidth="1.5dp">
+
+        <ListView
+            android:id="@+id/lstProductos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#5D4037"
+            android:dividerHeight="1dp"
+            android:padding="8dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
